@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <template id="show_warranty_template"
+                  inherit_id="website_sale.total">
+            <xpath expr='//tr[@id="order_total_taxes"]' position="after">
+                <br/>
+                <br/>
+                <tr id="product_warranty">
+                    <td class="text-right border-0">Product Warranty:</td>
+                    <td class="text-xl-right border-0">
+                        <span t-field="website_sale_order.website_order_line.product_id.time_interval"
+                              style="white-space: nowrap;"/>
+                    </td>
+                </tr>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>
